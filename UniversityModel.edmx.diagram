@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2987df7fd2e940c79cb4bb3e6acdd988" Name="Diagram1">
+        <EntityTypeShape EntityType="University_DBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="University_DBModel.tblCollege" Width="1.5" PointX="0.75" PointY="22" />
+        <EntityTypeShape EntityType="University_DBModel.tblEducationalField" Width="1.5" PointX="3" PointY="20.75" />
+        <EntityTypeShape EntityType="University_DBModel.tblExtraAccess" Width="1.5" PointX="7.5" PointY="21.625" />
+        <EntityTypeShape EntityType="University_DBModel.tblFile" Width="1.5" PointX="7.5" PointY="33.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblFileToMessage" Width="1.5" PointX="9.75" PointY="29.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblGender" Width="1.5" PointX="3" PointY="18.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblLesson" Width="1.5" PointX="3" PointY="23.5" />
+        <EntityTypeShape EntityType="University_DBModel.tblLoging" Width="1.5" PointX="7.5" PointY="51.5" />
+        <EntityTypeShape EntityType="University_DBModel.tblMessage" Width="1.5" PointX="7.5" PointY="25.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblPhoto" Width="1.5" PointX="3" PointY="26.625" />
+        <EntityTypeShape EntityType="University_DBModel.tblPhotoToMessage" Width="1.5" PointX="9.75" PointY="23.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblPresenceAbsence" Width="1.5" PointX="12.5" PointY="27.375" />
+        <EntityTypeShape EntityType="University_DBModel.tblRequestAnswer" Width="1.5" PointX="7.5" PointY="18.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblRequest" Width="1.5" PointX="12.5" PointY="22.875" />
+        <EntityTypeShape EntityType="University_DBModel.tblRole" Width="1.5" PointX="8.25" PointY="14.625" />
+        <EntityTypeShape EntityType="University_DBModel.tblRoleAccess" Width="1.5" PointX="10.5" PointY="13.625" />
+        <EntityTypeShape EntityType="University_DBModel.tblRoleToUser" Width="1.5" PointX="10.5" PointY="19.625" />
+        <EntityTypeShape EntityType="University_DBModel.tblScore" Width="1.5" PointX="13.5" PointY="19.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblStudentClassroomMapping" Width="1.5" PointX="10.5" PointY="16.5" />
+        <EntityTypeShape EntityType="University_DBModel.tblSystemPartName" Width="1.5" PointX="5.25" PointY="16.625" />
+        <EntityTypeShape EntityType="University_DBModel.tblTeacherLessonMapping" Width="1.5" PointX="13.5" PointY="13.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblUser" Width="1.5" PointX="5.25" PointY="19.375" />
+        <EntityTypeShape EntityType="University_DBModel.tblVideo" Width="1.5" PointX="7.5" PointY="30.25" />
+        <EntityTypeShape EntityType="University_DBModel.tblVideoToMessage" Width="1.5" PointX="9.75" PointY="26.25" />
+        <EntityTypeShape EntityType="University_DBModel.View_ClassRoom" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_FileToMessage" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_Message" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_PhotoToMessage" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_Requests" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_RoleAccesses" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_Score" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_StudentClassRoomMapping" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_User" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_UserLoging" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_UserRoles" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="University_DBModel.View_VideoToMessage" Width="1.5" PointX="10.75" PointY="9.75" />
+        <AssociationConnector Association="University_DBModel.FK_tblEducationalField_tblCollege" />
+        <AssociationConnector Association="University_DBModel.FK_tblLesson_tblCollege" />
+        <AssociationConnector Association="University_DBModel.FK_tblTeacherLessonMapping_tblCollege" />
+        <AssociationConnector Association="University_DBModel.FK_tblUser_tblCollege" />
+        <AssociationConnector Association="University_DBModel.FK_tblUser_tblEducationalField" />
+        <AssociationConnector Association="University_DBModel.FK_tblUserExtraAccess_tblSystemPartName" />
+        <AssociationConnector Association="University_DBModel.FK_tblUserExtraAccess_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblFileToMessage_tblFiles" />
+        <AssociationConnector Association="University_DBModel.FK_tblFileToMessage_tblMessages" />
+        <AssociationConnector Association="University_DBModel.FK_tblUser_tblGender" />
+        <AssociationConnector Association="University_DBModel.FK_tblTeacherLessonMapping_tblLesson" />
+        <AssociationConnector Association="University_DBModel.FK_tblLoging_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblMessages_tblMessages" />
+        <AssociationConnector Association="University_DBModel.FK_tblMessages_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblMessages_tblUser1" />
+        <AssociationConnector Association="University_DBModel.FK_tblPhotoToMessage_tblMessages" />
+        <AssociationConnector Association="University_DBModel.FK_tblVideoToMessage_tblMessages" />
+        <AssociationConnector Association="University_DBModel.FK_tblPhotoToMessage_tblPhotos" />
+        <AssociationConnector Association="University_DBModel.FK_tblRequests_tblPhotos" />
+        <AssociationConnector Association="University_DBModel.FK_tblUser_tblPhotos" />
+        <AssociationConnector Association="University_DBModel.FK_tblPresenceAbsence_tblTeacherLessonMapping" />
+        <AssociationConnector Association="University_DBModel.FK_tblPresenceAbsence_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblRequestAnswer_tblRequests" />
+        <AssociationConnector Association="University_DBModel.FK_tblRequestAnswer_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblRequests_tblScores" />
+        <AssociationConnector Association="University_DBModel.FK_tblRequests_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblRoleAccess_tblRole" />
+        <AssociationConnector Association="University_DBModel.FK_tblUserRole_tblRole" />
+        <AssociationConnector Association="University_DBModel.FK_tblRoleAccess_tblSystemPartName" />
+        <AssociationConnector Association="University_DBModel.FK_tblUserRole_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblScore_tblTeacherLessonMapping1" />
+        <AssociationConnector Association="University_DBModel.FK_tblScore_tblUser1" />
+        <AssociationConnector Association="University_DBModel.FK_tblStudentClassroomMapping_tblTeacherLessonMapping" />
+        <AssociationConnector Association="University_DBModel.FK_tblStudentClassroomMapping_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblTeacherLessonMapping_tblUser" />
+        <AssociationConnector Association="University_DBModel.FK_tblVideoToMessage_tblVideos" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

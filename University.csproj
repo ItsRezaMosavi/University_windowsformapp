@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B231A794-4F91-40FC-8B8E-81AF96638BB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>University</RootNamespace>
+    <AssemblyName>University</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateTime, Version=1.1.5082.36395, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsPublicVariable.cs" />
+    <Compile Include="frmChangeProfilePhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeProfilePhoto.Designer.cs">
+      <DependentUpon>frmChangeProfilePhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassRoomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassRoomManagement.Designer.cs">
+      <DependentUpon>frmClassRoomManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEducationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEducationReport.Designer.cs">
+      <DependentUpon>frmEducationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginLogoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginLogoutReport.Designer.cs">
+      <DependentUpon>frmLoginLogoutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresenceAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPresenceAbsence.Designer.cs">
+      <DependentUpon>frmPresenceAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPresenceAbsenceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPresenceAbsenceReport.Designer.cs">
+      <DependentUpon>frmPresenceAbsenceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceivedMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceivedMessage.Designer.cs">
+      <DependentUpon>frmReceivedMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRequests.Designer.cs">
+      <DependentUpon>frmRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoleAccessManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoleAccessManagement.Designer.cs">
+      <DependentUpon>frmRoleAccessManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRolesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRolesManagement.Designer.cs">
+      <DependentUpon>frmRolesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScores.Designer.cs">
+      <DependentUpon>frmScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchUser.Designer.cs">
+      <DependentUpon>frmSearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectClassRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectClassRoom.Designer.cs">
+      <DependentUpon>frmSelectClassRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRole.Designer.cs">
+      <DependentUpon>frmSelectRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectYearTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectYearTerm.Designer.cs">
+      <DependentUpon>frmSelectYearTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSendMessage.Designer.cs">
+      <DependentUpon>frmSendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentClassRoomMappingAccessRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentClassRoomMappingAccessRequest.Designer.cs">
+      <DependentUpon>frmStudentClassRoomMappingAccessRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentClassRoomMappingbyStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentClassRoomMappingbyStudent.Designer.cs">
+      <DependentUpon>frmStudentClassRoomMappingbyStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemPartManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemPartManagement.Designer.cs">
+      <DependentUpon>frmSystemPartManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTakenUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTakenUnits.Designer.cs">
+      <DependentUpon>frmTakenUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThisTermClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThisTermClasses.Designer.cs">
+      <DependentUpon>frmThisTermClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddClassRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddClassRoom.Designer.cs">
+      <DependentUpon>frmAddClassRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditDeleteCollege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditDeleteCollege.Designer.cs">
+      <DependentUpon>frmAddEditDeleteCollege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditDeleteEducationalField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditDeleteEducationalField.Designer.cs">
+      <DependentUpon>frmAddEditDeleteEducationalField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLesson.Designer.cs">
+      <DependentUpon>frmAddLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCollegeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCollegeManagement.Designer.cs">
+      <DependentUpon>frmCollegeManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditClassRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditClassRoom.Designer.cs">
+      <DependentUpon>frmEditClassRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditLesson.Designer.cs">
+      <DependentUpon>frmEditLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditUser.Designer.cs">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterScore.Designer.cs">
+      <DependentUpon>frmRegisterScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectTeacher.Designer.cs">
+      <DependentUpon>frmSelectTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentClassRoomMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentClassRoomMapping.Designer.cs">
+      <DependentUpon>frmStudentClassRoomMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUniversityManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUniversityManagement.Designer.cs">
+      <DependentUpon>frmUniversityManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInformation.Designer.cs">
+      <DependentUpon>frmUserInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserManagement.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserToRoleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserToRoleManagement.Designer.cs">
+      <DependentUpon>frmUserToRoleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkTime.Designer.cs">
+      <DependentUpon>frmWorkTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCollege.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEducationalField.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblExtraAccess.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblFile.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblFileToMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblGender.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblLesson.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblLoging.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPhoto.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPhotoToMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPresenceAbsence.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRequest.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRequestAnswer.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRole.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRoleAccess.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRoleToUser.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblScore.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblStudentClassroomMapping.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSystemPartName.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTeacherLessonMapping.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblUser.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblVideo.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblVideoToMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UniversityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniversityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UniversityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UniversityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniversityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="View_ClassRoom.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_FileToMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Message.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_PhotoToMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Requests.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_RoleAccesses.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Score.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_StudentClassRoomMapping.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_User.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_UserLoging.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_UserRoles.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_VideoToMessage.cs">
+      <DependentUpon>UniversityModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmChangeProfilePhoto.resx">
+      <DependentUpon>frmChangeProfilePhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassRoomManagement.resx">
+      <DependentUpon>frmClassRoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEducationReport.resx">
+      <DependentUpon>frmEducationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginLogoutReport.resx">
+      <DependentUpon>frmLoginLogoutReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPresenceAbsence.resx">
+      <DependentUpon>frmPresenceAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPresenceAbsenceReport.resx">
+      <DependentUpon>frmPresenceAbsenceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceivedMessage.resx">
+      <DependentUpon>frmReceivedMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRequests.resx">
+      <DependentUpon>frmRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoleAccessManagement.resx">
+      <DependentUpon>frmRoleAccessManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRolesManagement.resx">
+      <DependentUpon>frmRolesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScores.resx">
+      <DependentUpon>frmScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchUser.resx">
+      <DependentUpon>frmSearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectClassRoom.resx">
+      <DependentUpon>frmSelectClassRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRole.resx">
+      <DependentUpon>frmSelectRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectYearTerm.resx">
+      <DependentUpon>frmSelectYearTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSendMessage.resx">
+      <DependentUpon>frmSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentClassRoomMappingAccessRequest.resx">
+      <DependentUpon>frmStudentClassRoomMappingAccessRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentClassRoomMappingByStudent.resx">
+      <DependentUpon>frmStudentClassRoomMappingbyStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemPartManagement.resx">
+      <DependentUpon>frmSystemPartManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTakenUnits.resx">
+      <DependentUpon>frmTakenUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThisTermClasses.resx">
+      <DependentUpon>frmThisTermClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddClassRoom.resx">
+      <DependentUpon>frmAddClassRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditDeleteCollege.resx">
+      <DependentUpon>frmAddEditDeleteCollege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditDeleteEducationalField.resx">
+      <DependentUpon>frmAddEditDeleteEducationalField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLesson.resx">
+      <DependentUpon>frmAddLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCollegeManagement.resx">
+      <DependentUpon>frmCollegeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditClassRoom.resx">
+      <DependentUpon>frmEditClassRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditLesson.resx">
+      <DependentUpon>frmEditLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditUser.resx">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterScore.resx">
+      <DependentUpon>frmRegisterScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectTeacher.resx">
+      <DependentUpon>frmSelectTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentClassRoomMapping.resx">
+      <DependentUpon>frmStudentClassRoomMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUniversityManagement.resx">
+      <DependentUpon>frmUniversityManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInformation.resx">
+      <DependentUpon>frmUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserManagement.resx">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserToRoleManagement.resx">
+      <DependentUpon>frmUserToRoleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkTime.resx">
+      <DependentUpon>frmWorkTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="UniversityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UniversityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="UniversityModel.edmx.diagram">
+      <DependentUpon>UniversityModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+    <None Include="Resources\download %282%29.png" />
+    <None Include="Resources\download %283%29.png" />
+    <None Include="Resources\download %284%29.png" />
+    <None Include="Resources\download %285%29.png" />
+    <None Include="Resources\download %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UniversityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UniversityModel.edmx</DependentUpon>
+      <LastGenOutput>UniversityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="UniversityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UniversityModel.edmx</DependentUpon>
+      <LastGenOutput>UniversityModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
